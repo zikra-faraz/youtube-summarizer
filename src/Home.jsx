@@ -38,8 +38,7 @@ function Home() {
   useEffect(() => {
     fetchHistory();
   }, []);
-  const graphqlUrl =
-    "https://ljikpemqnxknqaiyxdxr.hasura.ap-south-1.nhost.run/v1/graphql";
+  const graphqlUrl = import.meta.env.VITE_GRAPHQL_URL;
 
   //store summary
   const storeSummary = async (url, data) => {
@@ -79,7 +78,7 @@ function Home() {
         {
           headers: {
             "Content-Type": "application/json",
-            "x-hasura-admin-secret": "H$gr^b=#Z;fIo2x=L)i)!u2N%i=KpYk-",
+            "x-hasura-admin-secret": import.meta.env.VITE_ADMIN_SECRET,
           },
         }
       );
@@ -123,7 +122,7 @@ function Home() {
         {
           headers: {
             "Content-Type": "application/json",
-            "x-hasura-admin-secret": "H$gr^b=#Z;fIo2x=L)i)!u2N%i=KpYk-",
+            "x-hasura-admin-secret": import.meta.env.VITE_ADMIN_SECRET,
           },
         }
       );
@@ -160,7 +159,7 @@ function Home() {
         {
           headers: {
             "Content-Type": "application/json",
-            "x-hasura-admin-secret": "H$gr^b=#Z;fIo2x=L)i)!u2N%i=KpYk-",
+            "x-hasura-admin-secret": import.meta.env.VITE_ADMIN_SECRET,
           },
         }
       );
@@ -194,7 +193,7 @@ function Home() {
         {
           headers: {
             "Content-Type": "application/json",
-            "x-hasura-admin-secret": "H$gr^b=#Z;fIo2x=L)i)!u2N%i=KpYk-",
+            "x-hasura-admin-secret": import.meta.env.VITE_ADMIN_SECRET,
           },
         }
       );
